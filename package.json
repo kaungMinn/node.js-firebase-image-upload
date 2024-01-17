@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^4.17.21",
+    "@types/firebase": "^3.2.1",
+    "@types/multer": "^1.4.11",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "firebase": "^10.7.1",
+    "multer": "^1.4.5-lts.1",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "name": "firesotreimage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/server.js",
+    "dev": "nodemon ./dist/server.js",
+    "build": "tsc --project tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
