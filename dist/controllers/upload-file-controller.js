@@ -38,12 +38,12 @@ router.post("/", upload.single("filename"), (req, res) => __awaiter(void 0, void
         //by using uploadByesResumable we can control the progress of uploading like pause, resume, cancel
         //Grab the public url
         const downloadURL = yield (0, storage_1.getDownloadURL)(snapshot.ref);
-        console.log('File successfully uploaded.');
+        console.log("File successfully uploaded.");
         return res.send({
             message: "file uploaded to firebase storage",
             name: (_d = req.file) === null || _d === void 0 ? void 0 : _d.originalname,
             type: (_e = req.file) === null || _e === void 0 ? void 0 : _e.mimetype,
-            downloadURL: downloadURL
+            downloadURL: downloadURL,
         });
     }
     catch (error) {
@@ -52,8 +52,9 @@ router.post("/", upload.single("filename"), (req, res) => __awaiter(void 0, void
 }));
 const giveCurrentDateTime = () => {
     const today = new Date();
-    const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    const date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
     const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    const dateTime = date + ' ' + time;
+    const dateTime = date + " " + time;
     return dateTime;
 };
+exports.default = router;
